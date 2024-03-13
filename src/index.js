@@ -7,7 +7,16 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Weather />
+    <div class="container">
+      <Weather />
+      <a
+        href="https://github.com/ElenaHoncharova/weather-react.git"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Open-sourse code
+      </a>
+    </div>
   </React.StrictMode>
 );
 
