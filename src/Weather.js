@@ -28,27 +28,30 @@ export default function Search() {
     setCity(event.target.value);
   }
   return (
-    <div>
+    <div class="container weather-wrapper">
       <form onSubmit={handleSubmit}>
-        <input type="search" onChange={updateCity} />
-        <input type="submit" value="Search" />
+        <input class="weather-input" type="search" onChange={updateCity} />
+        <input class="button" type="submit" value="Search" />
       </form>
       {temperature && (
-        <p>
-          Temperature: {Math.round(temperature)}°C <br />
-          Description: {sky}
-          <br />
-          Humidity: {Math.round(humidity)}% <br />
-          Wind: {Math.round(wind)}km/h
-          <br />
-          Icon:
-          {
-            <img
-              src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
-              alt=""
-            />
-          }
-        </p>
+        <ul>
+          <li>Temperature: {Math.round(temperature)}°C </li>
+          <li>Description: {sky}</li>
+
+          <li>Humidity: {Math.round(humidity)}% </li>
+          <li>Wind: {Math.round(wind)}km/h</li>
+
+          <li>
+            Icon:
+            {
+              <img
+                class="main-icon"
+                src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+                alt=""
+              />
+            }
+          </li>
+        </ul>
       )}
     </div>
   );
