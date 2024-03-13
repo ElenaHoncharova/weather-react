@@ -10,6 +10,7 @@ root.render(
     <div class="container">
       <Weather />
       <a
+        class="link"
         href="https://github.com/ElenaHoncharova/weather-react.git"
         target="_blank"
         rel="noreferrer"
